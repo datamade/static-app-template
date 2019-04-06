@@ -1,3 +1,5 @@
 language: node_js
+node_js:
+  - 11.13.0
 install: yarn install
 test: yarn lint
