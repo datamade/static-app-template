@@ -21,7 +21,13 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "jshint": "^2.10.2"
+    "babel-eslint": "9.x",
+    "eslint": "5.x",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-plugin-flowtype": "2.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x"
   },
   "license": "MIT",
   "scripts": {
@@ -29,7 +35,7 @@
     "develop": "gatsby develop -H 0.0.0.0 -p 9000",
     "start": "yarn develop",
     "serve": "gatsby serve",
-    "lint": "jshint src/components/*.js src/pages/*.js",
+    "lint": "eslint src/components/*.js src/pages/*.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
