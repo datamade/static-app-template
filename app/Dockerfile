@@ -7,7 +7,7 @@ RUN set -ex \
 	&& buildDeps=" \
         python \
         make \
-		build-essential \
+        build-essential \
 	" \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends \
 	&& yarn install \

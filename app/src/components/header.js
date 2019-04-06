@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHome, faQuestionCircle } from "@fortawesome/free-solid-svg-icons"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 
@@ -10,7 +12,7 @@ const NavItem = props => (
   <div className="nav-item" style={{ fontSize: '15px', margin: '10px' }}>
     <p style={{ textAlign: 'left', marginTop: '10px' }}>
       <Link to={props.href}>
-        <i className={`fas fa-${props.icon}`}></i>&nbsp;
+        <FontAwesomeIcon icon={props.icon} />&nbsp;
         <strong>{props.title}</strong>
       </Link>
     </p>
@@ -19,8 +21,6 @@ const NavItem = props => (
 
 const Header = ({ siteTitle }) => (
   <StaticQuery
-    // This query retrieves the logo image. Change 'ssce_logo' to match the correct
-    // logo for the site.
     query={graphql`
       query {
         site {
@@ -46,8 +46,8 @@ const Header = ({ siteTitle }) => (
           <Nav className="mr-auto">
           </Nav>
           <Nav>
-            <NavItem href="/" icon="home" title="Home" />
-            <NavItem href="/about" icon="question-circle" title="About" />
+            <NavItem href="/" icon={faHome} title="Home" />
+            <NavItem href="/about" icon={faQuestionCircle} title="About" />
           </Nav>
         </Navbar.Collapse>
       </Navbar>
