@@ -7,4 +7,4 @@ node_js:
   - 11.13.0
 before_install: cd app
 install: yarn install
-test: yarn lint
+script: yarn lint
